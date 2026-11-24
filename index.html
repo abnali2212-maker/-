@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f5ead5">
 <meta property="og:title" content="محمد ودارين | دعوة زفاف">
-<meta property="og:description" content="يسعدنا دعوتكم لحضور حفل زفاف محمد ودارين يوم 29 نوفمبر 2026">
+<meta property="og:description" content="دعوتكم لحضور حفل زفاف محمد ودارين يوم 29 نوفمبر 2026">
 <title>محمد ودارين | دعوة زفاف</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&family=Marhey:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-:root {
+:root{
  --paper:#f8eedc;
  --gold:#96733a;
  --gold2:#b69a63;
@@ -24,151 +24,282 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
- margin:0;background:#eee0c8;color:var(--ink);
- font-family:'Amiri',serif
+ margin:0;
+ background:#eee0c8;
+ color:var(--ink);
+ font-family:'Amiri',serif;
 }
-button,input,textarea{font:inherit}
 .page{
- max-width:520px;margin:auto;background:var(--paper);
- overflow:hidden;box-shadow:0 0 40px #5b452522;
- position:relative
+ max-width:520px;
+ margin:auto;
+ background:var(--paper);
+ overflow:hidden;
+ box-shadow:0 0 40px #5b452522;
 }
 .lang{
- position:fixed;z-index:8;top:14px;
- left:max(14px,calc((100vw - 492px)/2));
- border:1px solid #c5ad7d;background:#fff9eddd;
- color:#755d32;border-radius:24px;padding:8px 15px;
- font:13px 'Cormorant Garamond',serif;
- cursor:pointer
+ position:fixed;
+ z-index:8;
+ top:14px;
+ left:14px;
+ border:1px solid #c5ad7d;
+ background:#fff9ed;
+ color:#755d32;
+ border-radius:24px;
+ padding:8px 15px;
+ cursor:pointer;
 }
 .music{
- position:fixed;z-index:8;bottom:22px;
- right:max(18px,calc((100vw - 480px)/2));
- width:55px;height:55px;border:0;border-radius:50%;
- background:var(--olive);color:white;font-size:22px;
- box-shadow:0 5px 20px #443b2a33;cursor:pointer
+ position:fixed;
+ z-index:8;
+ bottom:22px;
+ right:18px;
+ width:55px;
+ height:55px;
+ border:0;
+ border-radius:50%;
+ background:var(--olive);
+ color:white;
+ font-size:22px;
+ cursor:pointer;
 }
 .section{
- position:relative;text-align:center;padding:52px 26px;
- background:linear-gradient(180deg,#fbf2e2,#f4e6ce)
+ position:relative;
+ text-align:center;
+ padding:55px 26px;
+ background:linear-gradient(180deg,#fbf2e2,#f4e6ce);
 }
-.orn{color:var(--gold2);font-size:25px;letter-spacing:8px;margin:12px auto}
+.orn{
+ color:var(--gold2);
+ font-size:25px;
+ letter-spacing:8px;
+ margin:12px auto;
+}
 .eyebrow{
- font:500 13px 'Cormorant Garamond',serif;
- letter-spacing:3px;text-transform:uppercase;color:#9b8050
+ font:500 14px 'Cormorant Garamond',serif;
+ letter-spacing:3px;
+ color:#9b8050;
 }
 .arabic-title{
- font:36px 'Marhey',serif;color:#876a37;line-height:1.55
+ font:36px 'Marhey',serif;
+ color:#876a37;
+ line-height:1.7;
 }
 .cover{
- height:min(100svh,900px);min-height:650px;padding:0;
- background:#f6ecd9 url('frame_04.jpg') center/cover no-repeat;
- display:flex;align-items:flex-end;justify-content:center
+ min-height:100svh;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ padding:40px 20px;
+ background:
+ radial-gradient(ellipse at center,#fff9e9 0%,#f5e8cf 65%,#e8d5b4 100%);
+ border:10px double #c3a36b;
+ outline:5px solid #f8eedc;
+ outline-offset:-19px;
 }
-.cover .open{
- margin:0 0 11%;background:#fff9eddf;
- border:1px solid #b99a60;color:#886b37;
- border-radius:30px;padding:13px 30px;
- font:20px 'Amiri';box-shadow:0 4px 20px #8b744333;
- cursor:pointer
+.cover .eyebrow{font-size:17px}
+.cover-names{
+ font:clamp(48px,13vw,68px) 'Marhey',serif;
+ color:#87652f;
+ line-height:1.8;
+ margin:25px 0;
+ text-shadow:0 2px 1px #fff;
+}
+.cover-date{
+ font-size:23px;
+ line-height:2;
+}
+.open{
+ margin-top:35px;
+ background:#8b754c;
+ color:white;
+ border:1px solid #c4a875;
+ border-radius:30px;
+ padding:13px 30px;
+ font:20px 'Amiri';
+ cursor:pointer;
 }
 .hero{
- min-height:720px;
- background:linear-gradient(#f7ecd8aa,#f7ecd8bb),url('frame_06.jpg') center/cover no-repeat;
- padding-top:90px;display:flex;flex-direction:column;justify-content:center
+ min-height:700px;
+ background:
+ linear-gradient(#f7ecd8bb,#f7ecd8bb),
+ url('frame_06.jpg') center/cover no-repeat;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ padding-top:90px;
 }
 .names{
  font:clamp(43px,11vw,62px) 'Marhey',serif;
- color:#8b6a34;line-height:1.65;text-shadow:0 1px #fff8
+ color:#8b6a34;
+ line-height:1.65;
 }
-.amp{font:34px 'Cormorant Garamond';color:#b39860}
-.date{font:24px 'Amiri';line-height:1.8;margin-top:22px}
-.venue{font:italic 25px 'Cormorant Garamond';margin-top:12px}
-.intro{font-size:21px;line-height:2.05}
+.amp{
+ font:34px 'Cormorant Garamond';
+ color:#b39860;
+}
+.date{
+ font-size:24px;
+ line-height:1.9;
+ margin-top:22px;
+}
+.venue{
+ font:italic 25px 'Cormorant Garamond';
+ margin-top:12px;
+}
+.intro{
+ font-size:21px;
+ line-height:2.05;
+}
 .intro p{margin:7px 0}
-.countdown{
- background:linear-gradient(#f9efdfed,#f9efdfed),url('frame_07.jpg') center/cover;
- padding-top:65px;padding-bottom:65px
+.countdown{padding-top:65px;padding-bottom:65px}
+.subhead{
+ font:30px 'Marhey';
+ color:#806537;
+ margin:10px 0 18px;
 }
-.subhead{font:30px 'Marhey';color:#806537;margin:10px 0 18px}
 .count-grid{
- display:grid;grid-template-columns:repeat(4,1fr);
- gap:5px;direction:ltr;margin:28px auto;max-width:420px
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ gap:7px;
+ direction:ltr;
+ margin:28px auto;
+ max-width:420px;
 }
 .count-grid div{
- border:1px solid #c9b181;border-radius:50%;
- aspect-ratio:1;display:flex;flex-direction:column;
- align-items:center;justify-content:center;background:#fff8eb99
+ border:1px solid #c9b181;
+ border-radius:50%;
+ aspect-ratio:1;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ background:#fff8eb;
 }
-.count-grid b{font:28px 'Cormorant Garamond';font-weight:500}
-.count-grid small{font:13px 'Amiri';color:#92774a}
-.timeline{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:25px}
-.event{border:1px solid #d0bd98;background:#fff8eb99;padding:18px 8px}
-.event b{display:block;font:22px 'Cormorant Garamond';direction:ltr}
+.count-grid b{
+ font:28px 'Cormorant Garamond';
+ font-weight:500;
+}
+.count-grid small{font-size:13px;color:#92774a}
+.timeline{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:12px;
+ margin-top:25px;
+}
+.event{
+ border:1px solid #d0bd98;
+ background:#fff8eb;
+ padding:18px 8px;
+}
+.event b{
+ display:block;
+ font:22px 'Cormorant Garamond';
+ direction:ltr;
+}
 .event span{font-size:18px}
-.venue-section{
- background:linear-gradient(#f8eedcdd,#f8eedcdd),url('frame_08.jpg') center/cover no-repeat
-}
+.venue-section{background:#f6ead5}
 .venue-photo{
- width:100%;max-height:270px;object-fit:cover;
- margin:15px auto;border:7px solid #fff7e9;
- box-shadow:0 4px 18px #70552c22
+ width:100%;
+ max-height:270px;
+ object-fit:cover;
+ margin:15px auto;
+ border:7px solid #fff7e9;
+ box-shadow:0 4px 18px #70552c22;
 }
 .address{font-size:20px;line-height:1.8}
 .maplink{
- display:inline-block;margin:15px auto;padding:11px 24px;
- border-radius:5px;background:var(--olive);color:white;
- text-decoration:none;font-size:18px
+ display:inline-block;
+ margin:15px auto;
+ padding:11px 24px;
+ border-radius:5px;
+ background:var(--olive);
+ color:white;
+ text-decoration:none;
+ font-size:18px;
 }
-.dress{background:linear-gradient(#f8eedcdd,#f8eedcdd),url('frame_15.jpg') center/cover no-repeat}
-.dress-photo{width:100%;max-height:270px;object-fit:contain;margin:10px auto}
-.dress-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dress{background:#f8eedc}
+.dress-photo{
+ width:100%;
+ max-height:270px;
+ object-fit:contain;
+ margin:10px auto;
+}
+.dress-grid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:12px;
+}
 .dress-card{
- background:#fff8ebbb;border:1px solid #d1bd98;
- padding:12px 8px;font-size:18px;line-height:1.7
+ background:#fff8eb;
+ border:1px solid #d1bd98;
+ padding:12px 8px;
+ font-size:18px;
+ line-height:1.7;
 }
-.dress-card b{display:block;font:20px 'Cormorant Garamond';margin-bottom:5px}
+.dress-card b{
+ display:block;
+ font:20px 'Cormorant Garamond';
+ margin-bottom:5px;
+}
 .rsvp input,.rsvp textarea{
- display:block;width:100%;margin:12px 0;padding:13px;
- border:1px solid #d2bd95;background:#fffaf1;
- border-radius:3px;color:#6e542f;text-align:right;font-size:17px
+ display:block;
+ width:100%;
+ margin:12px 0;
+ padding:13px;
+ border:1px solid #d2bd95;
+ background:#fffaf1;
+ border-radius:3px;
+ color:#6e542f;
+ text-align:right;
+ font-size:17px;
 }
-.rsvp textarea{min-height:90px;resize:vertical}
+.rsvp textarea{min-height:90px}
 .rsvp button{
- border:0;background:var(--olive);color:white;
- padding:12px 42px;font-size:19px;border-radius:4px;cursor:pointer
+ border:0;
+ background:var(--olive);
+ color:white;
+ padding:12px 42px;
+ font-size:19px;
+ border-radius:4px;
+ cursor:pointer;
 }
 .footer{
- min-height:490px;
- background:linear-gradient(#f8eedcbb,#f8eedcbb),url('frame_18.jpg') center/cover no-repeat;
- display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:80px
+ min-height:350px;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ background:linear-gradient(180deg,#f5e8d2,#ead8b8);
 }
-.footer .arabic-title{font-size:30px}
 .hidden{display:none!important}
 .fade{animation:fade .8s ease}
 @keyframes fade{
  from{opacity:0;transform:translateY(12px)}
  to{opacity:1;transform:none}
 }
-[dir=ltr] .rsvp input,[dir=ltr] .rsvp textarea{text-align:left}
+[dir=ltr] .rsvp input,
+[dir=ltr] .rsvp textarea{text-align:left}
 @media(max-width:380px){
  .section{padding-left:18px;padding-right:18px}
- .cover{min-height:620px}
- .hero{min-height:660px}
  .arabic-title{font-size:31px}
+ .hero{min-height:650px}
 }
 </style>
 </head>
 
 <body>
 <button class="lang" id="langBtn">ENGLISH ◉</button>
-<button class="music" id="musicBtn" aria-label="تشغيل الموسيقى">▶</button>
+<button class="music" id="musicBtn">▶</button>
 <audio id="song" src="music.mp3" loop preload="auto"></audio>
 
 <main class="page">
 
 <section class="section cover" id="cover">
- <button class="open" id="openBtn">اضغط لفتح الدعوة</button>
+ <div class="eyebrow" data-ar="بكل الحب ندعوكم" data-en="WITH LOVE WE INVITE YOU">بكل الحب ندعوكم</div>
+ <div class="cover-names">محمد<br><span class="amp">&</span><br>دارين</div>
+ <div class="orn">❧ ✦ ❧</div>
+ <div class="cover-date" data-ar="الأحد ٢٩ نوفمبر ٢٠٢٦<br>الساعة الثامنة مساءً" data-en="Sunday, 29 November 2026<br>At 8:00 PM">الأحد ٢٩ نوفمبر ٢٠٢٦<br>الساعة الثامنة مساءً</div>
+ <button class="open" id="openBtn" data-ar="اضغط لفتح الدعوة" data-en="Open Invitation">اضغط لفتح الدعوة</button>
 </section>
 
 <div id="invitation" class="hidden">
@@ -177,9 +308,7 @@ button,input,textarea{font:inherit}
  <div class="eyebrow" data-ar="دعوة زفاف" data-en="WEDDING INVITATION">دعوة زفاف</div>
  <div class="names">محمد<br><span class="amp">&</span><br>دارين</div>
  <div class="orn">❧ ✦ ❧</div>
- <div class="date" data-ar="الأحد ٢٩ نوفمبر ٢٠٢٦<br>الساعة الثامنة مساءً" data-en="Sunday, 29 November 2026<br>At 8:00 PM">
- الأحد ٢٩ نوفمبر ٢٠٢٦<br>الساعة الثامنة مساءً
- </div>
+ <div class="date" data-ar="الأحد ٢٩ نوفمبر ٢٠٢٦<br>الساعة الثامنة مساءً" data-en="Sunday, 29 November 2026<br>At 8:00 PM">الأحد ٢٩ نوفمبر ٢٠٢٦<br>الساعة الثامنة مساءً</div>
  <div class="venue">Wedding Celebration</div>
 </section>
 
@@ -275,7 +404,6 @@ async function toggleMusic(){
   }
  }
 }
-
 musicBtn.addEventListener('click',toggleMusic);
 
 document.getElementById('openBtn').addEventListener('click',async()=>{
@@ -320,21 +448,16 @@ setInterval(tick,1000);
 
 document.getElementById('rsvpForm').addEventListener('submit',e=>{
  e.preventDefault();
-
  let n=document.getElementById('guestName').value.trim();
  let c=document.getElementById('guestCount').value.trim();
  let m=document.getElementById('guestMsg').value.trim();
 
- let message=
- `تأكيد حضور حفل زفاف محمد ودارين
+ let message=`تأكيد حضور حفل زفاف محمد ودارين
 الاسم: ${n}
 عدد الأفراد: ${c||'غير محدد'}
 الرسالة: ${m||'لا يوجد'}`;
 
- window.open(
-  `https://wa.me/201151454431?text=${encodeURIComponent(message)}`,
-  '_blank'
- );
+ window.open(`https://wa.me/201151454431?text=${encodeURIComponent(message)}`,'_blank');
 });
 </script>
 </body>
