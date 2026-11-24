@@ -88,8 +88,7 @@ body{
  align-items:center;
  justify-content:center;
  overflow:hidden;
- background:
- linear-gradient(135deg,#fffdf7,#f4e8d2);
+ background:linear-gradient(135deg,#fffdf7,#f4e8d2);
  border:1px solid #e2d2af;
  box-shadow:0 12px 35px #8c704022;
 }
@@ -318,11 +317,12 @@ body{
 
 <button class="lang" id="langBtn">ENGLISH ◉</button>
 <button class="music" id="musicBtn" aria-label="الموسيقى">▶</button>
-<audio id="song" src="music.mp3" loop preload="auto"></audio>
+
+<!-- الأغنية الجديدة -->
+<audio id="song" src="42b94e77d0592f2d417cc910008bbea1.mp4" loop preload="auto"></audio>
 
 <main class="page">
 
-<!-- شاشة فتح الظرف -->
 <section class="envelope-screen" id="cover">
  <div class="envelope">
   <div class="envelope-content">
@@ -335,7 +335,6 @@ body{
  </div>
 </section>
 
-<!-- كل تفاصيل الدعوة -->
 <div id="invitation" class="hidden">
 
 <section class="section hero">
@@ -423,6 +422,7 @@ async function toggleMusic(){
   }
  }
 }
+
 musicBtn.addEventListener('click',toggleMusic);
 
 document.getElementById('openBtn').addEventListener('click',async()=>{
