@@ -471,10 +471,11 @@ document.getElementById('rsvpForm').addEventListener('submit',e=>{
  let c=document.getElementById('guestCount').value.trim();
  let m=document.getElementById('guestMsg').value.trim();
 
- let message=`تأكيد حضور حفل زفاف محمد ودارين
+ 
+let message=`تأكيد حضور حفل زفاف محمد ودارين ♥️
 الاسم: ${n}
 عدد الأفراد: ${c||'غير محدد'}
-الرسالة: ${m||'لا يوجد'}`;
+رسالة اهداء للعروسين: ${m||'لا يوجد'}`;
 
  window.open(`https://wa.me/201151454431?text=${encodeURIComponent(message)}`,'_blank');
 });
