@@ -5,21 +5,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f7edda">
-<meta property="og:title" content="محمد ودارين | دعوة زفاف">
-<meta property="og:description" content="دعوتكم لحضور حفل زفاف محمد ودارين يوم 29 نوفمبر 2026">
+<meta property="og:title" content="دعوة زفاف محمد ودارين">
+<meta property="og:description" content="يسعدنا دعوتكم لمشاركة فرحتنا">
 <title>محمد ودارين | دعوة زفاف</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&family=Marhey:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 :root{
  --bg:#f7edda;
  --gold:#a08045;
- --gold-light:#c6ad7b;
+ --light:#d3bd8c;
  --green:#7b845f;
  --text:#70572f;
- --white:#fffaf0;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -31,32 +29,27 @@ body{
 }
 .page{
  max-width:520px;
+ min-height:100vh;
  margin:auto;
  overflow:hidden;
  background:var(--bg);
  box-shadow:0 0 35px #51412722;
 }
-.section{
- padding:58px 25px;
- text-align:center;
- position:relative;
-}
 .lang{
  position:fixed;
- z-index:10;
+ z-index:20;
  top:14px;
  left:14px;
- border:1px solid var(--gold-light);
+ border:1px solid var(--light);
  border-radius:30px;
  background:#fffaf0;
  color:var(--text);
  padding:9px 16px;
- font-size:14px;
  cursor:pointer;
 }
 .music{
  position:fixed;
- z-index:10;
+ z-index:20;
  bottom:20px;
  right:18px;
  width:52px;
@@ -69,66 +62,121 @@ body{
  cursor:pointer;
  box-shadow:0 4px 15px #0002;
 }
-.orn{
- color:var(--gold-light);
- font-size:27px;
+.section{
+ padding:58px 25px;
+ text-align:center;
+}
+.hidden{display:none!important}
+
+/* شاشة الظرف */
+.envelope-screen{
+ min-height:100svh;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ padding:25px 18px;
+ background:
+ radial-gradient(ellipse at center,#fffdf7 0%,#f7edda 65%,#eee0c6 100%);
+}
+.envelope{
+ position:relative;
+ width:100%;
+ max-width:480px;
+ min-height:650px;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ overflow:hidden;
+ background:
+ linear-gradient(135deg,#fffdf7,#f4e8d2);
+ border:1px solid #e2d2af;
+ box-shadow:0 12px 35px #8c704022;
+}
+.envelope:before{
+ content:"";
+ position:absolute;
+ inset:0;
+ background:
+ linear-gradient(135deg,transparent 49.7%,#e8ddc9 50%,transparent 50.5%),
+ linear-gradient(225deg,transparent 49.7%,#e8ddc9 50%,transparent 50.5%);
+ opacity:.75;
+ pointer-events:none;
+}
+.envelope:after{
+ content:"";
+ position:absolute;
+ top:0;
+ left:0;
+ right:0;
+ height:42%;
+ background:linear-gradient(180deg,#fffdf8,#f4ead9);
+ clip-path:polygon(0 0,100% 0,50% 100%);
+ border-bottom:1px solid #e5d5b6;
+}
+.envelope-content{
+ position:relative;
+ z-index:2;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ text-align:center;
+ padding:30px 15px;
+}
+.seal{
+ width:150px;
+ height:150px;
+ border-radius:50%;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ background:
+ radial-gradient(circle,#f8e7b6 48%,#d5ae59 50%,#a87b2d 62%,#f4d98e 68%,#a77b31 73%,#e8c878 80%);
+ box-shadow:0 5px 15px #7d5a242e;
+ color:#78551e;
+ font-size:28px;
+ line-height:1.5;
+ padding:18px;
+ margin:15px 0;
+}
+.envelope-prompt{
+ font-size:25px;
+ color:#9c895f;
+ margin:15px 0;
+}
+.envelope-decoration{
+ color:#bba477;
+ font-size:30px;
  letter-spacing:8px;
- margin:18px 0;
+ margin:12px 0;
+}
+.open-btn{
+ position:relative;
+ z-index:3;
+ margin-top:15px;
+ padding:12px 30px;
+ border:1px solid #b69a63;
+ border-radius:30px;
+ background:#8a7953;
+ color:white;
+ font:20px 'Amiri',serif;
+ cursor:pointer;
+ box-shadow:0 5px 15px #80653b30;
+}
+.open-btn:active{transform:scale(.97)}
+
+/* تفاصيل الدعوة */
+.hero{
+ min-height:680px;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ background:linear-gradient(180deg,#f8efdf,#efe0c4);
 }
 .eyebrow{
  font:500 14px 'Cormorant Garamond',serif;
  letter-spacing:3px;
  color:var(--gold);
-}
-.title{
- font:36px 'Marhey',serif;
- color:var(--gold);
- line-height:1.7;
-}
-.cover{
- min-height:100svh;
- display:flex;
- flex-direction:column;
- justify-content:center;
- align-items:center;
- padding:65px 20px;
- background:
- radial-gradient(ellipse at center,#fffaf0 0%,#f5e9d2 65%,#e8d7b7 100%);
- border:10px double var(--gold-light);
- outline:5px solid var(--bg);
- outline-offset:-19px;
-}
-.cover:before,.cover:after{
- content:"❦";
- color:var(--gold-light);
- font-size:35px;
-}
-.cover-names{
- font:clamp(48px,13vw,68px) 'Marhey',serif;
- color:#896b37;
- line-height:1.8;
- margin:22px 0;
-}
-.cover-date{
- font-size:22px;
- line-height:2;
-}
-.open{
- margin-top:35px;
- border:1px solid var(--gold);
- border-radius:30px;
- background:var(--green);
- color:white;
- padding:13px 32px;
- font:20px 'Amiri';
- cursor:pointer;
-}
-.hero{
- min-height:690px;
- display:flex;
- flex-direction:column;
- justify-content:center;
- background:linear-gradient(180deg,#f8efdf,#efe0c4);
 }
 .names{
  font:clamp(46px,12vw,65px) 'Marhey',serif;
@@ -137,7 +185,13 @@ body{
 }
 .amp{
  font:38px 'Cormorant Garamond',serif;
- color:var(--gold-light);
+ color:var(--light);
+}
+.orn{
+ color:var(--light);
+ font-size:27px;
+ letter-spacing:8px;
+ margin:18px 0;
 }
 .date{
  font-size:23px;
@@ -150,6 +204,11 @@ body{
  background:#fff8e9;
 }
 .intro p{margin:8px 0}
+.title{
+ font:34px 'Marhey',serif;
+ color:var(--gold);
+ line-height:1.8;
+}
 .subhead{
  font:30px 'Marhey',serif;
  color:var(--gold);
@@ -165,7 +224,7 @@ body{
 }
 .count-grid div{
  aspect-ratio:1;
- border:1px solid var(--gold-light);
+ border:1px solid var(--light);
  border-radius:50%;
  display:flex;
  flex-direction:column;
@@ -203,10 +262,7 @@ body{
  margin:20px auto;
  box-shadow:0 5px 20px #70552c22;
 }
-.address{
- font-size:20px;
- line-height:1.8;
-}
+.address{font-size:20px;line-height:1.8}
 .maplink{
  display:inline-block;
  margin:18px auto 0;
@@ -217,32 +273,7 @@ body{
  text-decoration:none;
  font-size:18px;
 }
-.dress{
- background:#fff8e9;
-}
-.dress-grid{
- display:grid;
- grid-template-columns:1fr 1fr;
- gap:12px;
-}
-.dress-card{
- min-height:175px;
- display:flex;
- flex-direction:column;
- justify-content:center;
- background:#f8eedc;
- border:1px solid #d6c29c;
- padding:15px 8px;
- font-size:19px;
- line-height:1.8;
-}
-.dress-card b{
- font:24px 'Cormorant Garamond',serif;
- margin-bottom:10px;
-}
-.rsvp{
- background:#f3e6ce;
-}
+.rsvp{background:#f3e6ce}
 .rsvp input,.rsvp textarea{
  display:block;
  width:100%;
@@ -255,10 +286,7 @@ body{
  font:18px 'Amiri',serif;
  text-align:right;
 }
-.rsvp textarea{
- min-height:95px;
- resize:vertical;
-}
+.rsvp textarea{min-height:95px}
 .rsvp button{
  border:0;
  border-radius:5px;
@@ -272,8 +300,6 @@ body{
  background:linear-gradient(180deg,#efe0c4,#e8d7b7);
  padding:75px 20px;
 }
-.footer .title{font-size:31px}
-.hidden{display:none!important}
 .fade{animation:fade .8s ease}
 @keyframes fade{
  from{opacity:0;transform:translateY(12px)}
@@ -283,7 +309,7 @@ body{
 [dir=ltr] .rsvp textarea{text-align:left}
 @media(max-width:380px){
  .section{padding-left:18px;padding-right:18px}
- .title{font-size:31px}
+ .envelope{min-height:620px}
 }
 </style>
 </head>
@@ -296,14 +322,20 @@ body{
 
 <main class="page">
 
-<section class="section cover" id="cover">
- <div class="eyebrow" data-ar="بكل الحب ندعوكم لحضور" data-en="WITH LOVE, WE INVITE YOU TO">بكل الحب ندعوكم لحضور</div>
- <div class="cover-names">محمد<br><span class="amp">&</span><br>دارين</div>
- <div class="orn">✦ ❦ ✦</div>
- <div class="cover-date" data-ar="الأحد ٢٩ نوفمبر ٢٠٢٦<br>الساعة الثامنة مساءً" data-en="Sunday, 29 November 2026<br>At 8:00 PM">الأحد ٢٩ نوفمبر ٢٠٢٦<br>الساعة الثامنة مساءً</div>
- <button class="open" id="openBtn" data-ar="افتح الدعوة" data-en="Open Invitation">افتح الدعوة</button>
+<!-- شاشة فتح الظرف -->
+<section class="envelope-screen" id="cover">
+ <div class="envelope">
+  <div class="envelope-content">
+   <div class="envelope-decoration">❧ ✦ ❧</div>
+   <div class="seal" data-ar="بسم الله<br>الرحمن الرحيم" data-en="IN THE NAME<br>OF ALLAH">بسم الله<br>الرحمن الرحيم</div>
+   <div class="envelope-prompt" data-ar="اضغط لفتح الدعوة" data-en="OPEN YOUR INVITATION">اضغط لفتح الدعوة</div>
+   <div class="envelope-decoration">✧ ❦ ✧</div>
+   <button class="open-btn" id="openBtn" data-ar="فتح الدعوة" data-en="OPEN INVITATION">فتح الدعوة</button>
+  </div>
+ </div>
 </section>
 
+<!-- كل تفاصيل الدعوة -->
 <div id="invitation" class="hidden">
 
 <section class="section hero">
@@ -347,21 +379,6 @@ body{
  <img class="venue-photo" src="palace.jpg" alt="قاعة الحفل">
  <div class="address" data-ar="يسعدنا حضوركم ومشاركتنا فرحتنا" data-en="We would be delighted to celebrate with you">يسعدنا حضوركم ومشاركتنا فرحتنا</div>
  <a class="maplink" href="https://maps.app.goo.gl/U94y2rCDRGeruW1f9?g_st=ac" target="_blank" rel="noopener" data-ar="افتح الموقع على خرائط جوجل" data-en="Open location in Google Maps">افتح الموقع على خرائط جوجل</a>
-</section>
-
-<section class="section dress">
- <div class="subhead" data-ar="الزي المقترح" data-en="DRESS CODE">الزي المقترح</div>
- <div class="orn">✦</div>
- <div class="dress-grid">
-  <div class="dress-card">
-   <b data-ar="السيدات" data-en="Ladies">السيدات</b>
-   <span data-ar="فستان سهرة باللون الأحمر أو الأسود أو البرغندي" data-en="Elegant evening dresses in red, black or burgundy">فستان سهرة باللون الأحمر أو الأسود أو البرغندي</span>
-  </div>
-  <div class="dress-card">
-   <b data-ar="الرجال" data-en="Gentlemen">الرجال</b>
-   <span data-ar="بدلة سوداء أنيقة" data-en="Elegant black suits">بدلة سوداء أنيقة</span>
-  </div>
- </div>
 </section>
 
 <section class="section rsvp">
@@ -412,7 +429,7 @@ document.getElementById('openBtn').addEventListener('click',async()=>{
  document.getElementById('cover').classList.add('hidden');
  document.getElementById('invitation').classList.remove('hidden');
  document.getElementById('invitation').classList.add('fade');
- window.scrollTo({top:0,behavior:'smooth'});
+ window.scrollTo({top:0,behavior:'instant'});
  if(!playing) await toggleMusic();
 });
 
@@ -462,6 +479,5 @@ document.getElementById('rsvpForm').addEventListener('submit',e=>{
  window.open(`https://wa.me/201151454431?text=${encodeURIComponent(message)}`,'_blank');
 });
 </script>
-
 </body>
 </html>
