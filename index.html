@@ -73,15 +73,13 @@ body{
 }
 .hidden{display:none!important}
 
-/* شاشة الظرف */
 .envelope-screen{
  min-height:100svh;
  display:flex;
  align-items:center;
  justify-content:center;
  padding:25px 18px;
- background:
- radial-gradient(ellipse at center,#fffdf7 0%,#f7edda 65%,#eee0c6 100%);
+ background:radial-gradient(ellipse at center,#fffdf7 0%,#f7edda 65%,#eee0c6 100%);
 }
 .envelope{
  position:relative;
@@ -134,8 +132,7 @@ body{
  display:flex;
  align-items:center;
  justify-content:center;
- background:
- radial-gradient(circle,#f8e7b6 48%,#d5ae59 50%,#a87b2d 62%,#f4d98e 68%,#a77b31 73%,#e8c878 80%);
+ background:radial-gradient(circle,#f8e7b6 48%,#d5ae59 50%,#a87b2d 62%,#f4d98e 68%,#a77b31 73%,#e8c878 80%);
  box-shadow:0 5px 15px #7d5a242e;
  color:#78551e;
  font-size:28px;
@@ -169,7 +166,6 @@ body{
 }
 .open-btn:active{transform:scale(.97)}
 
-/* تفاصيل الدعوة */
 .hero{
  min-height:680px;
  display:flex;
@@ -323,7 +319,6 @@ body{
 <button class="lang" id="langBtn">ENGLISH ◉</button>
 <button class="music" id="musicBtn" aria-label="الموسيقى">▶</button>
 
-<!-- الأغنية الجديدة -->
 <audio id="song" src="42b94e77d0592f2d417cc910008bbea1.mp4" loop preload="auto"></audio>
 
 <main class="page">
@@ -346,7 +341,7 @@ body{
  <div class="eyebrow" data-ar="دعوة زفاف" data-en="WEDDING INVITATION">دعوة زفاف</div>
  <div class="names">محمد<br><span class="amp">&</span><br>دارين</div>
  <div class="orn">❧ ✦ ❧</div>
- <div class="date" data-ar="الأحد ٢٩ نوفمبر ٢٠٢٦<br>الساعة الثامنة مساءً" data-en="Sunday, 29 November 2026<br>At 8:00 PM">الأحد ٢٩ نوفمبر ٢٠٢٦<br>الساعة الثامنة مساءً</div>
+ <div class="date" data-ar="الأحد ٢٩ نوفمبر ٢٠٢٦<br>الساعة السابعة مساءً" data-en="Sunday, 29 November 2026<br>At 7:00 PM">الأحد ٢٩ نوفمبر ٢٠٢٦<br>الساعة السابعة مساءً</div>
  <div class="eyebrow" style="margin-top:25px">WEDDING CELEBRATION</div>
 </section>
 
@@ -357,7 +352,7 @@ body{
  <p class="title">محمد &amp; دارين</p>
  <p data-ar="يدعوكم العروسان لمشاركتهما فرحة حفل زفافهما" data-en="We invite you to celebrate our wedding">يدعوكم العروسان لمشاركتهما فرحة حفل زفافهما</p>
  <p data-ar="الأحد الموافق ٢٩ نوفمبر ٢٠٢٦" data-en="Sunday, 29 November 2026">الأحد الموافق ٢٩ نوفمبر ٢٠٢٦</p>
- <p data-ar="في تمام الساعة الثامنة مساءً" data-en="At 8:00 in the evening">في تمام الساعة الثامنة مساءً</p>
+ <p data-ar="في تمام الساعة السابعة مساءً" data-en="At 7:00 in the evening">في تمام الساعة السابعة مساءً</p>
  <div class="orn">✧ ❦ ✧</div>
 </section>
 
@@ -372,8 +367,8 @@ body{
  <div class="orn">❧ ✦ ❧</div>
  <div class="subhead" data-ar="برنامج الحفل" data-en="EVENT TIMELINE">برنامج الحفل</div>
  <div class="timeline">
-  <div class="event"><b>08:00 PM</b><span data-ar="استقبال الضيوف" data-en="Guest reception">استقبال الضيوف</span></div>
-  <div class="event"><b>08:30 PM</b><span data-ar="بداية الاحتفال" data-en="Celebration begins">بداية الاحتفال</span></div>
+  <div class="event"><b>07:00 PM</b><span data-ar="استقبال الضيوف" data-en="Guest reception">استقبال الضيوف</span></div>
+  <div class="event"><b>07:30 PM</b><span data-ar="بداية الاحتفال" data-en="Celebration begins">بداية الاحتفال</span></div>
  </div>
 </section>
 
@@ -453,7 +448,7 @@ document.getElementById('langBtn').addEventListener('click',()=>{
  });
 });
 
-const target=new Date('2026-11-29T20:00:00+02:00').getTime();
+const target=new Date('2026-11-29T19:00:00+02:00').getTime();
 
 function tick(){
  let d=Math.max(0,target-Date.now());
@@ -476,7 +471,6 @@ document.getElementById('rsvpForm').addEventListener('submit',e=>{
  let c=document.getElementById('guestCount').value.trim();
  let m=document.getElementById('guestMsg').value.trim();
 
- 
 let message=`تأكيد حضور حفل زفاف محمد ودارين ♥️
 الاسم: ${n}
 عدد الأفراد: ${c||'غير محدد'}
